@@ -1,0 +1,19 @@
+{
+  "name": "internship_assignment",
+  "version": "1.0.0",
+  "description": "\"Node Js\"",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon api/index.js",
+    "vercel-build":"echo hello"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "geolib": "^3.3.4",
+    "mysql": "^2.18.1"
+  }
+}
