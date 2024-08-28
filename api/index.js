@@ -59,8 +59,6 @@ app.post("/addSchool", async (req, res, next) => {
 
 //get route
 app.get("/listSchools", async (req, res, next) => {
-  const newHeaders = new Headers(req.headers);
-  newHeaders.set("Cache-Control", "no-cache");
   try {
     const { latitude, longitude } = req.query;
     const userLat = parseFloat(latitude);
@@ -74,8 +72,6 @@ app.get("/listSchools", async (req, res, next) => {
 
     DB.query(query, (err, results) => {
       if (err) {
-        console.log("isme aa rha");
-
         return next(new ErrorClass(err.message, 400));
       }
 
